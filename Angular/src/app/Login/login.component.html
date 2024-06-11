@@ -1,0 +1,30 @@
+<div class="w-screen h-screen flex items-center justify-center bg-cyan-700">
+  <img class="w-140 h-150 mr-8 border-gray-50" src="../assets/vault.png" alt="">
+    <img class="w-140 h-150 mr-8 border-gray-50"  alt="">
+    <h1 class="text-8xl mr-8 font-bold text-amber-500 text-center mb-8">VaultProject</h1>
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-4">Logowanie</h2>
+      <form (ngSubmit)="submitLogin()" >
+        <div class="mb-4">
+          <label for="username" class="block text-gray-700">Nazwa użytkownika:</label>
+          <input [(ngModel)]="username" type="text" id="username" name="username" name="username"
+            class="border border-gray-300 rounded-md p-2 w-full">
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block text-gray-700">Hasło:</label>
+          <input [(ngModel)]="password" type="password" id="password" name="password" name="password"
+            class="border border-gray-300 rounded-md p-2 w-full">
+        </div>
+        <div class="flex justify-between items-center">
+          <button type="submit"
+            class="bg-amber-300 mr-2 text-white font-bold py-2 px-4 rounded hover:bg-amber-500 transition duration-300 ease-in-out">Zaloguj
+            się</button>
+          <a href="#" class="text-gray-600 hover:underline">Zapomniałeś hasła?</a>
+        </div>
+        <div *ngIf="errorMessage" class="text-red-500 mt-4">
+          {{ errorMessage }}
+        </div>
+      </form>
+    </div>
+  </div>
+  
